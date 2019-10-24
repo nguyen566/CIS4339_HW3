@@ -1,14 +1,18 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @physician.name %>
+<p id="notice">
+    <%= notice %>
 </p>
 
 <p>
-  <strong>Specialty:</strong>
-  <%= @physician.specialty %>
+    <strong>Name:</strong>
+    <%= @physician.name %>
 </p>
+
+<p>
+    <strong>Specialty:</strong>
+    <%= @physician.specialty %>
+</p>
+
+
 
 <%= link_to 'Edit', edit_physician_path(@physician) %> |
-<%= link_to 'Back', physicians_path %>
+    <%= link_to 'Back', physicians_path %>
