@@ -16,6 +16,7 @@
 </p>
 
 <hr style="border:1px solid#dcdcdc" />
+
 <h3>Office Locations</h3>
 <table class="office_table">
     <tr>
@@ -50,7 +51,7 @@
                 <%= appointment.patient.name %>
             </td>
             <td>
-                <%= appointment.visit %>
+                <%= appointment.visit.to_s(:long_ordinal) %>
             </td>
     </tr>
     <% end %>
