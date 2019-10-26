@@ -24,10 +24,15 @@
                     <%= form.text_field :specialty %>
             </div>
 
-            <div class="field">
-                <p>
-                    <strong>Office Locations</strong>
-                </p>
+            <h3>Office Locations</h3>
+
+            <div id='offices'>
+                <%= form.fields_for :offices do |office| %>
+                    <%= render 'office_fields', :f => office %>
+                        <% end %>
+                            <div class='links'>
+                                <%= link_to_add_association 'Add an Office', form, :offices %>
+                            </div>
             </div>
 
             <div class="actions">

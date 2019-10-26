@@ -1,24 +1,26 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Street address:</strong>
-  <%= @office.street_address %>
+<p id="notice">
+    <%= notice %>
 </p>
 
 <p>
-  <strong>Zip:</strong>
-  <%= @office.zip %>
+    <strong>Street address:</strong>
+    <%= @office.street_address %>
 </p>
 
 <p>
-  <strong>Phone:</strong>
-  <%= @office.phone %>
+    <strong>Zip:</strong>
+    <%= @office.zip %>
 </p>
 
 <p>
-  <strong>Physician:</strong>
-  <%= @office.physician_id %>
+    <strong>Phone:</strong>
+    <%= @office.phone %>
+</p>
+
+<p>
+    <strong>Physician:</strong>
+    <%= @office.physician.name %>
 </p>
 
 <%= link_to 'Edit', edit_office_path(@office) %> |
-<%= link_to 'Back', offices_path %>
+    <%= link_to 'Back', offices_path %>
