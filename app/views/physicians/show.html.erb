@@ -15,6 +15,47 @@
     </h3>
 </p>
 
+<hr style="border:1px solid#dcdcdc" />
+<h3>Office Locations</h3>
+<table class="office_table">
+    <tr>
+        <th>Street Address</th>
+        <th>Zip Code</th>
+        <th>Phone</th>
+    </tr>
+    <tr>
+        <% @physician.offices.each do |office| %>
+            <td>
+                <%= office.street_address%>
+            </td>
+            <td>
+                <%= office.zip %>
+            </td>
+            <td>
+                <%= office.phone %>
+            </td>
+    </tr>
+    <% end %>
+</table>
+
+<h3>Appointments</h3>
+<table class="appointment_table">
+    <tr>
+        <th>Patient Name</th>
+        <th>Date of Appointment</th>
+    </tr>
+    <tr>
+        <% @physician.appointments.each do |appointment| %>
+            <td>
+                <%= appointment.patient.name %>
+            </td>
+            <td>
+                <%= appointment.visit %>
+            </td>
+    </tr>
+    <% end %>
+</table>
+
 
 
 
